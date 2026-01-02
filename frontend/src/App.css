@@ -1,0 +1,360 @@
+:root {
+    --brand: #6d001b;
+    --brand-dark: #520013;
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --text: #1f2937;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, Segoe UI, Arial;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+/* ========== LOGIN ========== */
+
+.login-box {
+    width: 360px;
+    background: white;
+    padding: 35px;
+    margin: 120px auto;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+    text-align: center;
+}
+
+.login-box h2 {
+    color: var(--brand);
+    margin-bottom: 20px;
+}
+
+.login-box input,
+.login-box select {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ========== LAYOUT ========== */
+
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, var(--brand), var(--brand-dark));
+    color: white;
+    height: 100vh;
+    padding: 25px 20px;
+    position: fixed;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, .25);
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: rgba(255, 255, 255, .12);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.sidebar button:hover {
+    background: white;
+    color: var(--brand);
+}
+
+.main {
+    margin-left: 260px;
+    padding: 35px;
+}
+
+
+/* ========== CARDS ========== */
+
+.section {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .06);
+    animation: fade .3s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.section h2 {
+    margin-top: 0;
+    color: var(--brand);
+}
+
+
+/* ========== FORMS ========== */
+
+input,
+select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 2px rgba(109, 0, 27, .15);
+}
+
+#stockForm,
+#challan input,
+#delivery input,
+#delivery select {
+    margin-top: 12px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+
+/* ========== TABLES ========== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: var(--bg);
+    text-align: left;
+    padding: 12px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+tr:hover {
+    background: #fafafa;
+}
+
+
+/* ========== REPORT CARDS ========== */
+
+#reports p {
+    background: var(--bg);
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+
+/* ========== AUDIT ========== */
+
+#audit ul {
+    list-style: none;
+    padding: 0;
+}
+
+#audit li {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: #444;
+}
+
+
+/* hide */
+
+.hidden {
+    display: none;
+}
+
+
+/* ================= FIX VISIBILITY & CONTRAST ================= */
+
+
+/* Stronger headings */
+
+.section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #6d001b;
+    margin-bottom: 18px;
+}
+
+
+/* Table header text darker */
+
+th {
+    background: #f1f2f6;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+
+/* Inputs – clearer borders & background */
+
+input,
+select {
+    background: #fafafa;
+    border: 1.5px solid #d1d5db;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+
+/* Input placeholder darker */
+
+::placeholder {
+    color: #6b7280;
+    opacity: 1;
+}
+
+
+/* On focus – strong highlight */
+
+input:focus,
+select:focus {
+    border-color: #6d001b;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(109, 0, 27, .15);
+}
+
+
+/* Stock form spacing */
+
+#stockForm input {
+    margin-bottom: 10px;
+}
+
+
+/* Add Stock button stand out */
+
+#stockForm button {
+    background: #6d001b;
+    margin-top: 8px;
+}
+
+
+/* Table rows text darker */
+
+td {
+    color: #1f2937;
+    font-weight: 500;
+}
+
+
+/* Card padding a bit more */
+
+.section {
+    padding: 30px;
+}
+
+
+/* Sidebar buttons text clearer */
+
+.sidebar button {
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+
+/* ========== MODAL ========== */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal {
+    background: white;
+    width: 420px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .25);
+    animation: fade .2s ease;
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: var(--brand);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-actions button.secondary {
+    background: #e5e7eb;
+    color: #111;
+}
